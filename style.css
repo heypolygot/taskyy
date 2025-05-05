@@ -51,7 +51,7 @@
     font-family: "Rubik Glitch", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 60px;
+    font-size: 80px;
     color: greenyellow;
     text-align: center;
 }
@@ -60,7 +60,7 @@
     font-family: "Great Vibes", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
     color: white;
     text-align: center;
 }
@@ -68,7 +68,7 @@
 
 .kanban{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
     min-height: 80vh;
 }
@@ -80,7 +80,7 @@
     min-width: auto;
     max-width: auto;
     box-shadow: var(--box-shadow);
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
 }
