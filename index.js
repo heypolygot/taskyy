@@ -1,4 +1,3 @@
-
 import Kanban from "./kanban.js";
 
 
@@ -45,9 +44,8 @@ addForm.forEach(form => {
     });
 });
 
-
 taskbox.forEach(column => {
-    column.addEventListener('click', event => {
+    column.addEventListener("click", event => {
         event.preventDefault();
 
         const formInput = event.target.parentElement.parentElement.previousElementSibling;
@@ -59,28 +57,26 @@ taskbox.forEach(column => {
         }
 
         if(event.target.classList.contains("update")){
-            formInput.setAttribute("disabled");
+            formInput.setAttribute("disabled", "disabled");
             event.target.classList.add("hide");
             event.target.previousElementSibling.classList.remove("hide");
 
-            const taskId = event.target.dataset.id;    
-            const columnId = event.target.dataset.column;    
+            const taskId = event.target.dataset.id;
+            const columnId = event.target.dataset.column;
             const content = formInput.value;
-
             Kanban.updateTask(taskId, {
                 columnId: columnId,
                 content: content
-            })
+            });
         }
-        
+
         if(event.target.classList.contains("delete")){
             formInput.parentElement.remove();
-            Kanban.deleteTask(event.target.dataset.id);         
+            Kanban.deleteTask(event.target.dataset.id);
         }
 
-
     });
-    
+
     column.addEventListener("dragstart", event => {
         if(event.target.classList.contains("card")){
             event.target.classList.add("dragging");
@@ -89,28 +85,20 @@ taskbox.forEach(column => {
 
     column.addEventListener("dragover", event => {
         const card = document.querySelector(".dragging");
-        column.appendChild(card)
+        column.appendChild(card);
     });
 
     column.addEventListener("dragend", event => {
         if(event.target.classList.contains("card")){
             event.target.classList.remove("dragging");
-        
-            const taskId = event.targer.dattaset.id;
+
+            const taskId = event.target.dataset.id;
             const columnId = event.target.parentElement.dataset.id;
-            const column = event.target.task.value;
+            const content = event.target.task.value;
             Kanban.updateTask(taskId, {
                 columnId: columnId,
                 content: content
-            })  
-        
-        
+            });
         }
     });
-
-
-
-
 });
-
-

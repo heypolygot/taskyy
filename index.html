@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notNotion - Web Based Kanban Style Application To Handle Project Progress</title>
 
-    <title>Tasky - Web Based Kanban Style Application To Handle Project Progress</title>
-    <link rel="icon" href="images/mushroom.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <main>
         <div class="outer-wrap">
             <div class="inner-wrap">
                 <section class="heading">
-                    <p class="title">Taskyy</p>
-                    <p class="sub-title">Web based kanban style application to handle project progress</p>
+                    <p class="title">notNotion</p>
+                    <p class="subtitle">Web Based Kanban Style Application To Handle Project Progress</p>
                 </section>
                 <section class="kanban">
                     <div class="taskbox">
                         <div class="title">
                             <p>TODO</p>
-                            <span class="todo"></span>
+                            <span class="todo">2</span>
                         </div>
                         <div class="cards todo" data-id="0">
                         </div>
@@ -33,9 +34,9 @@
                     <div class="taskbox">
                         <div class="title">
                             <p>IN PROGRESS</p>
-                            <span class="pending"></span>
+                            <span class="pending">1</span>
                         </div>
-                        <div class="cards pending" data-id="1" >
+                        <div class="cards pending" data-id="1">
                         </div>
                         <form class="add">
                             <input type="text" name="task" placeholder="New Task" autocomplete="off" maxlength="30">
@@ -45,7 +46,7 @@
                     <div class="taskbox">
                         <div class="title">
                             <p>COMPLETED</p>
-                            <span class="completed"></span>
+                            <span class="completed">2</span>
                         </div>
                         <div class="cards completed" data-id="2">
                         </div>
@@ -58,6 +59,7 @@
             </div>
         </div>
     </main>
+
     <script type="module" src="./index.js"></script>
 </body>
 </html>
